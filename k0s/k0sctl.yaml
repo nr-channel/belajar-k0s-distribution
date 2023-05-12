@@ -1,0 +1,30 @@
+apiVersion: k0sctl.k0sproject.io/v1beta1
+kind: Cluster
+metadata:
+  name: k0s-cluster
+spec:
+  hosts:
+  - ssh:
+      address: IP_ADDRESS_CONTROL_PLANE
+      user: root
+      port: 22
+      keyPath: VAGRANT_SSH_PUB_KEY
+    role: controller+worker
+    privateAddress: IP_ADDRESS_CONTROL_PLANE
+  - ssh:
+      address: IP_ADDRESS_WORKER_1
+      user: root
+      port: 22
+      keyPath: VAGRANT_SSH_PUB_KEY
+    role: worker
+    privateAddress: IP_ADDRESS_WORKER_1
+  - ssh:
+      address: IP_ADDRESS_WORKER_2
+      user: root
+      port: 22
+      keyPath: VAGRANT_SSH_PUB_KEY
+    role: worker
+    privateAddress: IP_ADDRESS_WORKER_2
+  k0s:
+    version: 1.27.1+k0s.0
+    dynamicConfig: false
