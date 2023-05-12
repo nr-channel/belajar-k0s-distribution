@@ -6,21 +6,21 @@ spec:
   hosts:
   - ssh:
       address: IP_ADDRESS_CONTROL_PLANE
-      user: root
+      user: vagrant
       port: 22
       keyPath: VAGRANT_SSH_PUB_KEY
     role: controller+worker
     privateAddress: IP_ADDRESS_CONTROL_PLANE
   - ssh:
       address: IP_ADDRESS_WORKER_1
-      user: root
+      user: vagrant
       port: 22
       keyPath: VAGRANT_SSH_PUB_KEY
     role: worker
     privateAddress: IP_ADDRESS_WORKER_1
   - ssh:
       address: IP_ADDRESS_WORKER_2
-      user: root
+      user: vagrant
       port: 22
       keyPath: VAGRANT_SSH_PUB_KEY
     role: worker
