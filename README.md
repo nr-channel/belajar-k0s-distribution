@@ -22,7 +22,7 @@
 - [Sistem Rekomendasi](#sistem-rekomendasi)
 - [Konfigurasi Virtual Box](#konfigurasi-virtual-box)
 - [Instalasi Vagrant](#instalasi-vagrant)
-- [Konfigurasi Server Menggunakan Vagrant](#)
+- [Konfigurasi Server Menggunakan Vagrant](#konfigurasi-server-menggunakan-vagrant)
 - [Instalasi k0sctl](#instalasi-k0sctl)
 - [Konfigurasi Kubernetes Cluster](#konfigurasi-kubernetes-cluster)
 - [Apply Konfigurasi k0sctl](#apply-konfigurasi-k0sctl)
@@ -42,7 +42,7 @@
 ## Konfigurasi Virtual Box ##
 Sebelum melanjutkan tutorial, kita harus melakukan konfigurasi **Virtual Box** terlebih dahulu. Adapun konfigurasi yang harus kita tambahkan adalah menambah network **Host Only** karena kita akan menggunakan IP local dari virtual box:
 - Buka Virtual Box
-- Pilih ***Tools** -> **Network**
+- Pilih **Tools** -> **Network**
 ![](./docs/assets/vbox-1.png)
 - Pada tab **Host-only Networks**, klik tombol **Create**
 ![](./docs/assets/vbox-2.png)
@@ -81,7 +81,7 @@ Atau, jika kamu menggunakan package manager, gunakan langkah berikut:
 - Sebelum melakukan konfigurasi **k0sctl**, kita perlu mengetahui **Public Key** dari setiap VM yang di-*inisiasi* oleh vagrant
 - Caranya adalah sebagai berikut:
   - Pindah direktori ke `vagrant`
-  - Jalankan perintah `vagrant ssh-config "control-plane"`, lalu buka dan catat lokasi **pubkey** `IdentityFile`.
+  - Jalankan perintah `vagrant ssh-config "control-plane"`, lalu buka dan catat lokasi **private_key** `IdentityFile`.
   - Jalankan perintah diatas untuk 2 VM selanjutnya (`worker-1` dan `worker-2`)
 - Buka file `k0s/k0sctl.yaml`
 - Lakukan konfigurasi sesuai kebutuhan
