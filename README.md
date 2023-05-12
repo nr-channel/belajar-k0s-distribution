@@ -78,7 +78,7 @@ Atau, jika kamu menggunakan package manager, gunakan langkah berikut:
 - Lakukan instalasi **k0sctl** sesuai dengan package manager OS kamu
 
 ## Konfigurasi Kubernetes Cluster ##
-- Sebelum melakukan konfigurasi **k0sctl**, kita perlu mengetahui **Public Key** dari setiap VM yang di-*inisiasi* oleh vagrant
+- Sebelum melakukan konfigurasi **k0sctl**, kita perlu mengetahui **Private Key** dari setiap VM yang di-*inisiasi* oleh vagrant
 - Caranya adalah sebagai berikut:
   - Pindah direktori ke `vagrant`
   - Jalankan perintah `vagrant ssh-config "control-plane"`, lalu buka dan catat lokasi **private_key** `IdentityFile`.
@@ -92,11 +92,7 @@ Atau, jika kamu menggunakan package manager, gunakan langkah berikut:
 k0sctl apply -c k0s/k0sctl.yaml
 ```
 - Lalu, tunggu hingga instalasi kubernetes selesai
-
-## Test Deployment ##
-- Selanjutnya, langkah terakhir adalah kita akan mengecek cluster dan membuat sebuah sample **POD**
-- Pindah direktori ke `k0s`
-- Jalankan perintah:
+- Kemudian, jalankan perintah:
 ```
 k0sctl kubeconfig > config
 export KUBECONFIG=$PWD/config
@@ -105,7 +101,10 @@ export KUBECONFIG=$PWD/config
 ```
 kubectl get no -o wide
 ```
-- Selanjutnya, pindah direktori ke `k8s`
+
+## Test Deployment ##
+- Selanjutnya, langkah terakhir adalah kita akan mengecek cluster dan membuat sebuah sample **Deployment** & **Service**
+- Pindah direktori ke `k8s`
 - Apply deployment dan service
 ```
 kubectl apply -f .
