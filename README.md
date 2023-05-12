@@ -1,4 +1,4 @@
-![](./docs/assets/**k0s**-logo.png | width=256)
+<img alt="" src="./docs/assets/k0s-logo.png" width="256" />
 
 # Belajar "k0s" Distribution #
 **k0s** adalah open source, distribusi Kubernetes all-inclusive, yang dikonfigurasi dengan semua fitur yang diperlukan untuk membangun kluster Kubernetes. Karena desainnya yang sederhana, opsi penerapan yang fleksibel, dan persyaratan sistem yang sederhana, **k0s** sangat cocok untuk:
