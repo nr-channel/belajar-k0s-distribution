@@ -30,7 +30,7 @@
 - [Clean Up](#)
 
 ## Sistem Rekomendasi ##
-- Total VM: `3 VM` atau lebih dengan memperhatikan *quorum* (n + 2) / ganjil.
+- Total VM: `3 VM` atau lebih dengan memperhatikan *quorum* (jumlah VM harus ganjil).
 - CPU/vCPU per VM: `1 Core` (Rekomendasi: `2 Core`)
 - Memory/RAM per VM: `1024 MB` (Rekomendasi: `2 GB` atau lebih)
 - Storage per VM: `20 GB` (Rekomendasi: `50 GB` atau lebih)
