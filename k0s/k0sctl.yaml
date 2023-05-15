@@ -5,26 +5,26 @@ metadata:
 spec:
   hosts:
   - ssh:
-      address: 192.168.56.11
+      address: PUBLIC_OR_PRIVATE_IP_ADDRESS
       user: vagrant
       port: 22
-      keyPath: /Users/nurimansyah/Developments/Youtube/repo/belajar-k0s-distribution/vagrant/.vagrant/machines/control-plane/virtualbox/private_key
+      keyPath: VAGRANT_SSH_PUB_KEY
     role: controller+worker
-    privateAddress: 192.168.56.11
+    privateAddress: PUBLIC_OR_PRIVATE_IP_ADDRESS
   - ssh:
-      address: 192.168.56.21
+      address: PUBLIC_OR_PRIVATE_IP_ADDRESS
       user: vagrant
       port: 22
-      keyPath: /Users/nurimansyah/Developments/Youtube/repo/belajar-k0s-distribution/vagrant/.vagrant/machines/worker-1/virtualbox/private_key
+      keyPath: VAGRANT_SSH_PUB_KEY
     role: worker
-    privateAddress: 192.168.56.21
+    privateAddress: PUBLIC_OR_PRIVATE_IP_ADDRESS
   - ssh:
-      address: 192.168.56.22
+      address: PUBLIC_OR_PRIVATE_IP_ADDRESS
       user: vagrant
       port: 22
-      keyPath: /Users/nurimansyah/Developments/Youtube/repo/belajar-k0s-distribution/vagrant/.vagrant/machines/worker-2/virtualbox/private_key
+      keyPath: VAGRANT_SSH_PUB_KEY
     role: worker
-    privateAddress: 192.168.56.22
+    privateAddress: PUBLIC_OR_PRIVATE_IP_ADDRESS
   k0s:
     version: 1.27.1+k0s.0
     dynamicConfig: false
